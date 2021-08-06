@@ -32,6 +32,8 @@ export const Container = styled.header`
 
     &:hover {
       border: 1px solid ${(props) => props.theme.colors.primaryMedium};
+      box-shadow: 0 0 4px ${(props) => props.theme.colors.primaryMedium};
+      text-shadow: 0 0 4px ${(props) => props.theme.colors.graylight};
     }
 
     &:active {

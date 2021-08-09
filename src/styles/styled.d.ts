@@ -17,6 +17,8 @@ declare module 'styled-components' {
       errorDark: string;
       errorMedium: string;
       errorLight: string;
+      // eslint-disable-next-line @typescript-eslint/ban-types
+      [key: string]: string | object;
 
       categories: {
         frontend: string;
@@ -27,7 +29,11 @@ declare module 'styled-components' {
         infra: string;
         marketing: string;
         inovation: string;
+        [key: string]: string;
       };
     };
+
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    [key: string]: string | object;
   }
 }

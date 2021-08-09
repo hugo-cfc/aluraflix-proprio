@@ -1,26 +1,28 @@
-import React, { useRef } from 'react';
-import ScrollContainer from 'react-indiana-drag-scroll';
+import React from 'react';
 
 import Header from '../../components/Header';
+import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
 
-import PlayerImg from '../../assets/player.png';
-
 import {
-  Container,
-  FeaturedContainer,
-  FeaturedDetails,
-  ContainerCarousel,
-  ScrollContainerStyled,
-} from './styles';
+  PlayerImg,
+  FrontImg1,
+  FrontImg2,
+  FrontImg3,
+  FrontImg4,
+  BackImg1,
+  BackImg2,
+  BackImg3,
+  BackImg4,
+  MobileImg1,
+  MobileImg2,
+  MobileImg3,
+  MobileImg4,
+} from './utils/imgsImports';
+
+import { Container, FeaturedContainer, FeaturedDetails } from './styles';
 
 export const Home: React.FC = () => {
-  const carouselEl = useRef(null);
-
-  const handleDragCarousel = (e: React.MouseEvent<HTMLDivElement>): void => {
-    console.log(e.currentTarget);
-  };
-
   return (
     <Container>
       <main>
@@ -45,14 +47,38 @@ export const Home: React.FC = () => {
 
             <img src={PlayerImg} alt="SEO" />
           </div>
-          <ScrollContainerStyled horizontal>
+
+          <Carousel horizontal>
+            <img src={FrontImg1} alt="SEO" />
+            <img src={FrontImg2} alt="SEO" />
+            <img src={FrontImg3} alt="SEO" />
+            <img src={FrontImg4} alt="SEO" />
             <img src={PlayerImg} alt="SEO" />
+          </Carousel>
+
+          <Carousel
+            horizontal
+            title="Back End"
+            subtitle="Formação Back End na Alura"
+          >
+            <img src={BackImg1} alt="SEO" />
+            <img src={BackImg2} alt="SEO" />
+            <img src={BackImg3} alt="SEO" />
+            <img src={BackImg4} alt="SEO" />
             <img src={PlayerImg} alt="SEO" />
+          </Carousel>
+
+          <Carousel
+            horizontal
+            title="Mobile"
+            subtitle="Formação Back End na Alura"
+          >
+            <img src={MobileImg1} alt="SEO" />
+            <img src={MobileImg2} alt="SEO" />
+            <img src={MobileImg3} alt="SEO" />
+            <img src={MobileImg4} alt="SEO" />
             <img src={PlayerImg} alt="SEO" />
-            <img src={PlayerImg} alt="SEO" />
-            <img src={PlayerImg} alt="SEO" />
-            <img src={PlayerImg} alt="SEO" />
-          </ScrollContainerStyled>
+          </Carousel>
         </FeaturedContainer>
       </main>
 

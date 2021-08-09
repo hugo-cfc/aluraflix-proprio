@@ -1,4 +1,3 @@
-import ScrollContainer from 'react-indiana-drag-scroll';
 import styled from 'styled-components';
 
 import BackgroundImg from '../../assets/background-home.jpg';
@@ -20,6 +19,7 @@ export const FeaturedContainer = styled.div`
     content: '';
 
     background-image: url(${BackgroundImg});
+    background-size: 100% 50%;
     background-repeat: no-repeat;
     filter: brightness(8%);
 
@@ -44,17 +44,22 @@ export const FeaturedContainer = styled.div`
       cursor: pointer;
     }
   }
+
+  div.container-carousel:not(:first-child) {
+    margin-left: 90px;
+  }
 `;
 
 export const FeaturedDetails = styled.div`
   margin-right: 50px;
 
   div {
-    background-color: ${(props) => props.theme.colors.primaryMedium};
+    background-color: ${(props) => props.theme.colors.categories.frontend};
     font-size: 40px;
 
     width: fit-content;
-    padding: 15px 20px;
+    padding: 10px 15px;
+    border-radius: 3px;
 
     margin-bottom: 40px;
   }
@@ -63,38 +68,5 @@ export const FeaturedDetails = styled.div`
     font-size: 46px;
 
     margin-bottom: 13px;
-  }
-`;
-
-export const ContainerCarousel = styled.div`
-  display: flex;
-
-  overflow: auto;
-  cursor: grab;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  img {
-    cursor: pointer;
-
-    & + img {
-      margin-left: 15px;
-    }
-  }
-`;
-
-export const ScrollContainerStyled = styled(ScrollContainer)`
-  display: flex;
-  cursor: grab;
-
-  img {
-    width: auto;
-    height: 260px;
-
-    & + img {
-      margin-left: 15px;
-    }
   }
 `;

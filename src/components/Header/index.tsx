@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from '../../assets/logo.svg';
 
-import { Container } from './style';
+import { Link, Container } from './style';
 
 interface HeaderProps {
   newVideoButton?: boolean;
@@ -13,9 +13,15 @@ export const Header: React.FC<
 > = ({ newVideoButton, ...rest }: HeaderProps) => {
   return (
     <Container {...rest}>
-      <img src={Logo} alt="" />
+      <Link to="/">
+        <img src={Logo} alt="Aluraflix" />
+      </Link>
 
-      {newVideoButton && <button type="button">Novo vídeo</button>}
+      {newVideoButton && (
+        <Link to="/new-video">
+          <button type="button">Novo vídeo</button>
+        </Link>
+      )}
     </Container>
   );
 };

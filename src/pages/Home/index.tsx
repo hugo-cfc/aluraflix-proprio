@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Container from '../../components/Container';
 import Header from '../../components/Header';
 import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
@@ -20,14 +21,14 @@ import {
   MobileImg4,
 } from './utils/imgsImports';
 
-import { Container, FeaturedContainer, FeaturedDetails } from './styles';
+import { FeaturedContainer, FeaturedDetails } from './styles';
 
 export const Home: React.FC = () => {
   return (
     <Container>
-      <main>
-        <Header newVideoButton />
+      <Header newVideoButton />
 
+      <main>
         <FeaturedContainer>
           <div className="featured-content">
             <FeaturedDetails>

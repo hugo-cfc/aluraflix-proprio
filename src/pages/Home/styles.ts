@@ -2,14 +2,6 @@ import styled from 'styled-components';
 
 import BackgroundImg from '../../assets/background-home.jpg';
 
-export const Container = styled.div`
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
 export const FeaturedContainer = styled.div`
   padding: 0 43px;
 
@@ -45,8 +37,16 @@ export const FeaturedContainer = styled.div`
     }
   }
 
-  div.container-carousel:not(:first-child) {
-    margin-left: 90px;
+  div.container-carousel {
+    margin-top: 50px;
+
+    &:nth-child(2) {
+      margin-top: 0px;
+    }
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
   }
 `;
 

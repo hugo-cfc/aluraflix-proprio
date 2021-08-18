@@ -8,7 +8,7 @@ import NewCategory from './pages/NewCategory';
 export const Routes: React.FC = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route path="/new-video" component={NewVideo} />
       <Route path="/new-category" component={NewCategory} />
     </Switch>

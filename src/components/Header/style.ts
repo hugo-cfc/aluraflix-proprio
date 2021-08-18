@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { Link as LinkOriginal } from 'react-router-dom';
+
+export const Link = styled(LinkOriginal)`
+  text-decoration: none;
+`;
 
 export const Container = styled.header`
   display: flex;
